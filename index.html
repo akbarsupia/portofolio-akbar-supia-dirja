@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Akbar Supia Dirja | Bisnis Digital & Content Creator</title>
+<meta name="description" content="Portfolio Akbar Supia Dirja - Mahasiswa Bisnis Digital, Content Creator, Business Intelligence Enthusiast"/>
+<meta property="og:title" content="Akbar Supia Dirja - Portfolio"/>
+<meta property="og:description" content="Bisnis Digital | Content Creator | Business Intelligence"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script>
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "primary": "#d4af35",
+        "bg-light": "#fbfbf9",
+        "bg-dark": "#201d12",
+      },
+      fontFamily: { "display": ["Inter", "sans-serif"] },
+    },
+  },
+}
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;overflow-x:hidden;transition:background .4s,color .4s}
+html{scroll-behavior:smooth}
+.luxury-shadow{box-shadow:0 10px 30px -15px rgba(212,175,53,.15)}
+.gold-gradient{background:linear-gradient(135deg,#d4af35 0%,#f2d472 100%)}
+
+/* Dark Mode */
+.dark body,.dark .bg-bg-light{background:#141110!important;color:#e8e0d0!important}
+.dark .bg-white,.dark .bg-bg-light{background:#1c1916!important}
+.dark header{background:rgba(20,17,16,.85)!important;border-color:rgba(212,175,53,.15)!important}
+.dark .text-\[#1a170f\],.dark .text-\[#1a170f\]\/70,.dark .text-\[#1a170f\]\/80{color:#e8e0d0!important}
+.dark .text-gray-500,.dark .text-gray-600,.dark .text-gray-400{color:#a89e8e!important}
+.dark .border-primary\/10{border-color:rgba(212,175,53,.15)!important}
+.dark .bg-gray-100{background:#252220!important}
+.dark #mobile-menu{background:#1c1916!important}
+.dark #preloader{background:#141110!important}
+.dark input,.dark textarea,.dark select{background:#252220!important;color:#e8e0d0!important;border-color:rgba(212,175,53,.2)!important}
+.dark h1,.dark h2,.dark h3,.dark h4,.dark h5,.dark h6,.dark p,.dark li,.dark span:not(.skill-tag){color:#e8e0d0!important}
+.dark .text-primary{color:#d4af35!important}
+
+/* Scroll Progress */
+#scroll-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#d4af35,#f2d472);z-index:9998;width:0;transition:width .1s}
+
+/* Custom Cursor */
+.cursor-dot{position:fixed;width:8px;height:8px;background:#d4af35;border-radius:50%;pointer-events:none;z-index:9997;transition:transform .15s;mix-blend-mode:difference}
+.cursor-ring{position:fixed;width:35px;height:35px;border:2px solid rgba(212,175,53,.5);border-radius:50%;pointer-events:none;z-index:9997;transition:transform .3s,width .3s,height .3s;mix-blend-mode:difference}
+@media(max-width:768px){.cursor-dot,.cursor-ring{display:none}}
+
+/* Preloader */
+#preloader{position:fixed;inset:0;z-index:9999;background:#fbfbf9;display:flex;align-items:center;justify-content:center;transition:opacity .6s}
+#preloader.hide{opacity:0;pointer-events:none}
+.loader{width:50px;height:50px;border:4px solid #d4af35;border-top-color:transparent;border-radius:50%;animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* Scroll Reveal */
+.reveal{opacity:0;transform:translateY(30px);transition:all .8s cubic-bezier(.16,1,.3,1)}
+.reveal.active{opacity:1;transform:translateY(0)}
+.reveal-left{opacity:0;transform:translateX(-30px);transition:all .8s cubic-bezier(.16,1,.3,1)}
+@media(min-width:768px){.reveal-left{transform:translateX(-40px)}}
+.reveal-left.active{opacity:1;transform:translateX(0)}
+.reveal-right{opacity:0;transform:translateX(30px);transition:all .8s cubic-bezier(.16,1,.3,1)}
+@media(min-width:768px){.reveal-right{transform:translateX(40px)}}
+.reveal-right.active{opacity:1;transform:translateX(0)}
+
+/* Particles */
+.particle{position:absolute;border-radius:50%;background:rgba(212,175,53,.15);animation:float 6s infinite ease-in-out}
+@keyframes float{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-20px) scale(1.1)}}
+
+/* Mobile Menu */
+#mobile-menu{transform:translateX(100%);transition:transform .35s cubic-bezier(.16,1,.3,1)}
+#mobile-menu.open{transform:translateX(0)}
+#menu-overlay{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:55;opacity:0;pointer-events:none;transition:opacity .35s}
+#menu-overlay.show{opacity:1;pointer-events:auto}
+
+/* Counter */
+.count-up{display:inline-block}
+
+/* Back to top */
+#back-top{opacity:0;transform:translateY(20px);transition:all .3s}
+#back-top.show{opacity:1;transform:translateY(0)}
+
+/* Timeline */
+.tl-item{position:relative;padding-left:2rem;border-left:2px solid rgba(212,175,53,.2)}
+.tl-item::before{content:'';position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;background:#d4af35}
+
+/* Typing cursor */
+.type-cursor::after{content:'|';animation:blink 1s step-end infinite;color:#d4af35}
+@keyframes blink{50%{opacity:0}}
+
+/* Project overlay */
+.proj-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(26,23,15,.85),transparent);opacity:0;transition:opacity .4s;display:flex;align-items:flex-end;padding:1.5rem;border-radius:.75rem}
+.group:hover .proj-overlay{opacity:1}
+
+/* Skill tag hover */
+.skill-tag{transition:all .3s}
+.skill-tag:hover{background:#d4af35;color:#fff;transform:translateY(-2px);box-shadow:0 4px 15px rgba(212,175,53,.3)}
+
+/* 3D Tilt */
+.tilt-card{transition:transform .4s cubic-bezier(.16,1,.3,1);transform-style:preserve-3d}
+.tilt-card:hover{transform:perspective(1000px) rotateY(-3deg) rotateX(3deg) scale(1.02)}
+
+/* Gradient Text */
+.gradient-text{background:linear-gradient(135deg,#d4af35 0%,#f2d472 50%,#d4af35 100%);background-size:200% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:shimmer 3s linear infinite}
+@keyframes shimmer{to{background-position:200% center}}
+
+/* Testimonial */
+.quote-mark{font-size:5rem;line-height:1;color:rgba(212,175,53,.15);font-family:Georgia,serif;position:absolute;top:-10px;left:0}
+
+/* Browser Frame */
+.browser-window { background: #fff; border-radius: 12px; overflow: hidden; border: 1px solid rgba(212,175,53,.15); box-shadow: 0 20px 50px -20px rgba(0,0,0,0.1); position: relative; }
+.browser-header { background: rgba(0,0,0,0.03); padding: 10px 14px; display: flex; align-items: center; gap: 6px; border-bottom: 1px solid rgba(0,0,0,0.05); }
+.browser-dot { width: 8px; height: 8px; border-radius: 50%; }
+.dot-red { background: #ff5f56; }
+.dot-yellow { background: #ffbd2e; }
+.dot-green { background: #27c93f; }
+.browser-address { height: 10px; flex: 1; background: #fff; border-radius: 4px; margin-left: 10px; opacity: 0.6; }
+.dark .browser-window { background: #1a1714; border-color: rgba(212,175,53,0.1); }
+.dark .browser-header { background: rgba(255,255,255,0.03); }
+.dark .browser-address { background: rgba(255,255,255,0.05); }
+
+/* Floating Icons */
+.float-icon { animation: float-icon 4s infinite ease-in-out; }
+@keyframes float-icon {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+</style>
+</head>
+<body class="bg-bg-light text-[#1a170f] selection:bg-primary/30">
+
+<!-- Scroll Progress Bar -->
+<div id="scroll-progress"></div>
+
+<!-- Custom Cursor -->
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+
+<!-- Mobile Menu Overlay -->
+<div id="menu-overlay" onclick="toggleMobileMenu()"></div>
+
+<!-- Preloader -->
+<div id="preloader"><div class="loader"></div></div>
+
+<!-- Header -->
+<header class="sticky top-0 z-50 w-full bg-bg-light/80 backdrop-blur-md border-b border-primary/10">
+<nav class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+  <div class="flex items-center gap-2">
+    <div class="size-8 flex items-center justify-center rounded-lg bg-primary text-white">
+      <span class="material-symbols-outlined text-lg">terminal</span>
+    </div>
+    <span class="text-xl font-bold tracking-tight">AKBAR<span class="text-primary">.</span></span>
+  </div>
+  <div class="hidden md:flex items-center gap-10">
+    <a class="text-sm font-medium hover:text-primary transition-colors" href="#about">Tentang</a>
+    <a class="text-sm font-medium hover:text-primary transition-colors" href="#services">Keahlian</a>
+    <a class="text-sm font-medium hover:text-primary transition-colors" href="#projects">Proyek</a>
+    <a class="text-sm font-medium hover:text-primary transition-colors" href="#experience">Pengalaman</a>
+    <button id="dark-toggle" onclick="toggleDarkMode()" class="size-10 flex items-center justify-center rounded-full hover:bg-primary/10 transition-all" title="Toggle Dark Mode">
+      <span class="material-symbols-outlined text-xl" id="dark-icon">dark_mode</span>
+    </button>
+    <a class="px-5 py-2.5 bg-primary text-white rounded-lg text-sm font-bold hover:opacity-90 transition-all luxury-shadow" href="#contact">Hubungi Saya</a>
+  </div>
+  <div class="flex items-center gap-2 md:hidden">
+    <button onclick="toggleDarkMode()" class="size-10 flex items-center justify-center rounded-full hover:bg-primary/10 transition-all">
+      <span class="material-symbols-outlined text-xl dark-icon-mobile">dark_mode</span>
+    </button>
+    <button id="menu-btn" class="text-primary" onclick="toggleMobileMenu()">
+      <span class="material-symbols-outlined text-3xl">menu</span>
+    </button>
+  </div>
+</nav>
+</header>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="fixed inset-y-0 right-0 w-72 bg-white z-[60] shadow-2xl p-8 flex flex-col gap-6">
+  <button onclick="toggleMobileMenu()" class="self-end text-gray-400"><span class="material-symbols-outlined">close</span></button>
+  <a onclick="toggleMobileMenu()" class="text-lg font-semibold hover:text-primary transition-colors" href="#about">Tentang</a>
+  <a onclick="toggleMobileMenu()" class="text-lg font-semibold hover:text-primary transition-colors" href="#services">Keahlian</a>
+  <a onclick="toggleMobileMenu()" class="text-lg font-semibold hover:text-primary transition-colors" href="#projects">Proyek</a>
+  <a onclick="toggleMobileMenu()" class="text-lg font-semibold hover:text-primary transition-colors" href="#experience">Pengalaman</a>
+  <a onclick="toggleMobileMenu()" class="px-5 py-3 bg-primary text-white rounded-lg text-center font-bold" href="#contact">Hubungi Saya</a>
+</div>
+
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[85vh] flex items-center overflow-hidden px-6">
+  <!-- Particles -->
+  <div class="absolute inset-0 overflow-hidden pointer-events-none">
+    <div class="particle w-4 h-4 top-[20%] left-[10%]" style="animation-delay:0s"></div>
+    <div class="particle w-6 h-6 top-[60%] left-[80%]" style="animation-delay:2s"></div>
+    <div class="particle w-3 h-3 top-[40%] left-[50%]" style="animation-delay:4s"></div>
+    <div class="particle w-5 h-5 top-[80%] left-[25%]" style="animation-delay:1s"></div>
+    <div class="particle w-4 h-4 top-[15%] left-[70%]" style="animation-delay:3s"></div>
+  </div>
+  <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center py-10 md:py-20">
+    <div class="z-10 order-2 lg:order-1 reveal-left">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest mb-6">
+        <span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span></span>
+        Mahasiswa Bisnis Digital
+      </div>
+      <h1 class="text-3xl sm:text-5xl lg:text-7xl font-black leading-[1.1] mb-4 tracking-tight">
+        Halo, Saya <br/><span class="gradient-text" id="typed-name">Akbar Supia Dirja</span>
+      </h1>
+      <p class="text-lg sm:text-2xl font-semibold text-primary mb-6"><span id="typed-role">Content Creator</span><span class="type-cursor"></span></p>
+      <p class="text-base sm:text-lg text-[#1a170f]/70 max-w-xl mb-10 leading-relaxed font-light">
+        Mahasiswa Bisnis Digital yang aktif dan berpengalaman dalam pengembangan sistem informasi, pembuatan website, analisis data, dan pembuatan dashboard. Terbiasa berkomunikasi, bekerja sama dalam tim, dan mengelola organisasi.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a class="flex-1 sm:flex-none px-6 sm:px-8 py-3 sm:py-4 bg-primary text-white rounded-lg font-bold text-base sm:text-lg hover:translate-y-[-2px] transition-all luxury-shadow flex items-center justify-center gap-2" href="#projects">
+          Lihat Proyek
+        </a>
+        <a class="flex-1 sm:flex-none px-6 sm:px-8 py-3 sm:py-4 border-2 border-primary/20 hover:border-primary text-primary rounded-lg font-bold text-base sm:text-lg transition-all flex items-center justify-center gap-2 bg-white/50 backdrop-blur-sm" href="assets/docs/CV_Akbar_Supia_Dirja.pdf" download>
+          <span class="material-symbols-outlined text-lg">download</span>Unduh CV
+        </a>
+      </div>
+    </div>
+    <div class="order-1 lg:order-2 relative group reveal-right flex justify-center lg:justify-end">
+      <div class="relative max-w-[300px] sm:max-w-[400px] w-full">
+        <div class="absolute -inset-4 bg-primary/5 rounded-3xl blur-2xl group-hover:bg-primary/10 transition-all"></div>
+        <div class="relative bg-white p-2 sm:p-3 rounded-3xl shadow-2xl border border-primary/10 overflow-hidden">
+          <img alt="Akbar Supia Dirja" class="rounded-2xl w-full object-cover aspect-[4/5] hover:scale-105 transition-transform duration-500" src="assets/images/poto-akbar.jpg" decoding="async"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section class="py-24 bg-white" id="about">
+<div class="max-w-4xl mx-auto px-6 text-center reveal">
+  <h2 class="text-3xl font-bold mb-8">Tentang Saya</h2>
+  <div class="w-20 h-1 bg-primary mx-auto mb-10"></div>
+  <p class="text-xl leading-relaxed text-[#1a170f]/80 font-light italic mb-8">
+    "Mahasiswa Bisnis Digital yang aktif dan berpengalaman dalam pengembangan sistem informasi, analisis data, dan pembuatan dashboard menggunakan Looker Studio. Memiliki pengalaman kerja di dunia UMKM, perancangan aplikasi berbasis website, serta konten digital. Tertarik pada Business Intelligence, pemasaran digital, dan pengembangan sistem pendukung keputusan."
+  </p>
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-8 py-10 border-y border-primary/10">
+    <div><p class="text-primary text-3xl font-bold"><span class="count-up" data-target="3">0</span>+</p><p class="text-sm font-medium uppercase tracking-widest text-gray-500">Tahun Pengalaman</p></div>
+    <div><p class="text-primary text-3xl font-bold"><span class="count-up" data-target="1">0</span>M+</p><p class="text-sm font-medium uppercase tracking-widest text-gray-500">Views TikTok</p></div>
+    <div><p class="text-primary text-3xl font-bold"><span class="count-up" data-target="6">0</span>+</p><p class="text-sm font-medium uppercase tracking-widest text-gray-500">Proyek Selesai</p></div>
+    <div><p class="text-primary text-3xl font-bold"><span class="count-up" data-target="3">0</span>+</p><p class="text-sm font-medium uppercase tracking-widest text-gray-500">Organisasi</p></div>
+  </div>
+</div>
+</section>
+
+<!-- Expertise Section -->
+<section class="py-24 bg-bg-light" id="services">
+<div class="max-w-7xl mx-auto px-6">
+  <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6 reveal">
+    <div class="max-w-2xl">
+      <h2 class="text-primary text-sm font-bold uppercase tracking-[0.3em] mb-4">Bidang Keahlian</h2>
+      <h3 class="text-4xl font-bold tracking-tight">Yang Saya Kuasai</h3>
+    </div>
+    <p class="text-gray-500 max-w-sm">Menggabungkan kemampuan teknis dan kreatif untuk solusi digital yang efektif.</p>
+  </div>
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <div class="group tilt-card bg-white p-6 md:p-10 rounded-2xl border border-primary/10 hover:border-primary/40 transition-all luxury-shadow reveal" style="transition-delay:.1s">
+      <div class="size-16 gold-gradient rounded-xl flex items-center justify-center text-white mb-8 group-hover:scale-110 transition-transform">
+        <span class="material-symbols-outlined text-3xl">analytics</span>
+      </div>
+      <h4 class="text-xl font-bold mb-4">Business Intelligence</h4>
+      <p class="text-gray-600 mb-6 leading-relaxed">Mengolah data menjadi insight berharga untuk pengambilan keputusan bisnis yang tepat.</p>
+      <ul class="space-y-3">
+        <li class="flex items-center gap-3 text-sm font-medium"><span class="material-symbols-outlined text-primary text-lg">check_circle</span>Dashboard Looker Studio</li>
+        <li class="flex items-center gap-3 text-sm font-medium"><span class="material-symbols-outlined text-primary text-lg">check_circle</span>Analisis Data & Visualisasi</li>
+        <li class="flex items-center gap-3 text-sm font-medium"><span class="material-symbols-outlined text-primary text-lg">check_circle</span>Sistem Pendukung Keputusan</li>
+      </ul>
+    </div>
+    <div class="group tilt-card bg-white p-6 md:p-10 rounded-2xl border border-primary/10 hover:border-primary/40 transition-all luxury-shadow reveal" style="transition-delay:.2s">
+      <div class="size-16 gold-gradient rounded-xl flex items-center justify-center text-white mb-8 group-hover:scale-110 transition-transform">
+        <span class="material-symbols-outlined text-3xl">campaign</span>
+      </div>
+      <h4 class="text-xl font-bold mb-4">Digital Marketing</h4>
+      <p class="text-gray-600 mb-6 leading-relaxed">Strategi pemasaran digital kreatif yang meningkatkan brand awareness dan engagement.</p>
+      <ul class="space-y-3">
+        <li class="flex items-center gap-3 text-sm font-medium"><span class="material-symbols-outlined text-primary text-lg">check_circle</span>Social Media Management</li>
+        <li class="flex items-center gap-3 text-sm font-medium"><span class="material-symbols-outlined text-primary text-lg">check_circle</span>Content Strategy & Branding</li>
+        <li class="flex items-center gap-3 text-sm font-medium"><span class="material-symbols-outlined text-primary text-lg">check_circle</span>Live Selling & Promotion</li>
+      </ul>
+    </div>
+    <div class="group tilt-card bg-white p-6 md:p-10 rounded-2xl border border-primary/10 hover:border-primary/40 transition-all luxury-shadow reveal" style="transition-delay:.3s">
+      <div class="size-16 gold-gradient rounded-xl flex items-center justify-center text-white mb-8 group-hover:scale-110 transition-transform">
+        <span class="material-symbols-outlined text-3xl">palette</span>
+      </div>
+      <h4 class="text-xl font-bold mb-4">Content Creation</h4>
+      <p class="text-gray-600 mb-6 leading-relaxed">Membuat konten kreatif yang viral dan menarik perhatian jutaan penonton.</p>
+      <ul class="space-y-3">
+        <li class="flex items-center gap-3 text-sm font-medium"><span class="material-symbols-outlined text-primary text-lg">check_circle</span>TikTok Content (1M+ Views)</li>
+        <li class="flex items-center gap-3 text-sm font-medium"><span class="material-symbols-outlined text-primary text-lg">check_circle</span>Design Produk & Visual</li>
+        <li class="flex items-center gap-3 text-sm font-medium"><span class="material-symbols-outlined text-primary text-lg">check_circle</span>Host Live Promotion</li>
+      </ul>
+    </div>
+    <div class="group tilt-card bg-white p-6 md:p-10 rounded-2xl border border-primary/10 hover:border-primary/40 transition-all luxury-shadow reveal" style="transition-delay:.4s">
+      <div class="size-16 gold-gradient rounded-xl flex items-center justify-center text-white mb-8 group-hover:scale-110 transition-transform">
+        <span class="material-symbols-outlined text-3xl">language</span>
+      </div>
+      <h4 class="text-xl font-bold mb-4">Web Development</h4>
+      <p class="text-gray-600 mb-6 leading-relaxed">Membangun website profesional yang responsif dan mudah digunakan untuk mendukung kebutuhan bisnis, personal branding, maupun institusi pendidikan.</p>
+      <ul class="space-y-3">
+        <li class="flex items-center gap-3 text-sm font-medium"><span class="material-symbols-outlined text-primary text-lg">check_circle</span>Website Company Profile</li>
+        <li class="flex items-center gap-3 text-sm font-medium"><span class="material-symbols-outlined text-primary text-lg">check_circle</span>Website E-Commerce</li>
+        <li class="flex items-center gap-3 text-sm font-medium"><span class="material-symbols-outlined text-primary text-lg">check_circle</span>Website Sekolah & Sistem Informasi</li>
+        <li class="flex items-center gap-3 text-sm font-medium"><span class="material-symbols-outlined text-primary text-lg">check_circle</span>Desain UI/UX & Web Layout</li>
+        <li class="flex items-center gap-3 text-sm font-medium"><span class="material-symbols-outlined text-primary text-lg">check_circle</span>Optimasi Performa & Responsive Design</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- Projects Section -->
+<section class="py-24 bg-white" id="projects">
+<div class="max-w-7xl mx-auto px-6">
+  <div class="text-center mb-16 reveal">
+    <h2 class="text-3xl font-bold mb-4">Proyek Unggulan</h2>
+    <p class="text-gray-500">Proyek akademik dan profesional yang sudah saya kerjakan.</p>
+  </div>
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+    <div class="group cursor-pointer reveal" style="transition-delay:.1s">
+      <div class="browser-window aspect-video mb-6 group-hover:translate-y-[-8px] transition-all duration-500 luxury-shadow">
+        <div class="browser-header">
+          <div class="browser-dot dot-red"></div>
+          <div class="browser-dot dot-yellow"></div>
+          <div class="browser-dot dot-green"></div>
+          <div class="browser-address"></div>
+        </div>
+        <div class="relative w-full h-[calc(100%-31px)] overflow-hidden bg-black">
+          <video class="lazy-video w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" muted loop playsinline preload="none">
+            <source data-src="assets/videos/project3.mp4" type="video/mp4">
+          </video>
+          <div class="proj-overlay"><div><p class="text-white font-bold text-lg">BI Internship — Distrinesia</p><p class="text-white/80 text-sm mt-1">Dashboard analisis menggunakan Looker Studio</p></div></div>
+        </div>
+      </div>
+      <h5 class="text-lg font-bold group-hover:text-primary transition-colors">BI Internship — Distrinesia</h5>
+      <p class="text-sm text-gray-500 uppercase tracking-wider mt-1">Business Intelligence / Looker Studio</p>
+    </div>
+    <div class="group cursor-pointer reveal" style="transition-delay:.2s">
+      <div class="browser-window aspect-video mb-6 group-hover:translate-y-[-8px] transition-all duration-500 luxury-shadow">
+        <div class="browser-header">
+          <div class="browser-dot dot-red"></div>
+          <div class="browser-dot dot-yellow"></div>
+          <div class="browser-dot dot-green"></div>
+          <div class="browser-address"></div>
+        </div>
+        <div class="relative w-full h-[calc(100%-31px)] overflow-hidden bg-black">
+          <video class="lazy-video w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" muted loop playsinline preload="none">
+            <source data-src="assets/videos/project1.mp4" type="video/mp4">
+          </video>
+          <div class="proj-overlay"><div><p class="text-white font-bold text-lg">Website Sekolah — PKBM JAYA GIRI</p><p class="text-white/80 text-sm mt-1">Website sekolah informatif dengan profil lembaga, berita, dan fitur akademik.</p></div></div>
+        </div>
+      </div>
+      <h5 class="text-lg font-bold group-hover:text-primary transition-colors">Website Sekolah — PKBM JAYA GIRI</h5>
+      <p class="text-sm text-gray-500 uppercase tracking-wider mt-1">WEB DEVELOPMENT / SCHOOL WEBSITE</p>
+    </div>
+    <div class="group cursor-pointer reveal" style="transition-delay:.3s">
+      <div class="browser-window aspect-video mb-6 group-hover:translate-y-[-8px] transition-all duration-500 luxury-shadow">
+        <div class="browser-header">
+          <div class="browser-dot dot-red"></div>
+          <div class="browser-dot dot-yellow"></div>
+          <div class="browser-dot dot-green"></div>
+          <div class="browser-address"></div>
+        </div>
+        <div class="relative w-full h-[calc(100%-31px)] overflow-hidden bg-black">
+          <video class="lazy-video w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" muted loop playsinline preload="none">
+            <source data-src="assets/videos/project2.mp4" type="video/mp4">
+          </video>
+          <div class="proj-overlay"><div><p class="text-white font-bold text-lg">RS Parfum — E-Commerce Parfum</p><p class="text-white/80 text-sm mt-1">Toko parfum online dengan katalog produk, keranjang belanja, dan payment gateway.</p></div></div>
+        </div>
+      </div>
+      <h5 class="text-lg font-bold group-hover:text-primary transition-colors">RS Parfum — E-Commerce Parfum</h5>
+      <p class="text-sm text-gray-500 uppercase tracking-wider mt-1">WEB DEVELOPMENT / E-COMMERCE</p>
+    </div>
+    <a href="https://datastudio.google.com/reporting/c6a5e79d-94bf-42a4-b409-d98d884024dd" target="_blank" class="group cursor-pointer reveal" style="transition-delay:.4s">
+      <div class="browser-window aspect-video mb-6 group-hover:translate-y-[-8px] transition-all duration-500 luxury-shadow">
+        <div class="browser-header">
+          <div class="browser-dot dot-red"></div>
+          <div class="browser-dot dot-yellow"></div>
+          <div class="browser-dot dot-green"></div>
+          <div class="browser-address"></div>
+        </div>
+        <div class="relative w-full h-[calc(100%-31px)] overflow-hidden bg-black">
+          <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="assets/images/dasboard.jpg" alt="Teen Mental Health Analysis" loading="lazy" decoding="async">
+          <div class="proj-overlay"><div><p class="text-white font-bold text-lg">Teen Mental Health Analysis</p><p class="text-white/80 text-sm mt-1">Social Media Usage & Teen Mental Health Analysis</p></div></div>
+        </div>
+      </div>
+      <h5 class="text-lg font-bold group-hover:text-primary transition-colors">Teen Mental Health Analysis</h5>
+      <p class="text-sm text-gray-500 uppercase tracking-wider mt-1">Business Intelligence / Looker Studio</p>
+    </a>
+  </div>
+</div>
+</section>
+
+<!-- Skills Section -->
+<section class="py-24 bg-bg-light" id="skills">
+<div class="max-w-7xl mx-auto px-6">
+  <div class="grid lg:grid-cols-2 gap-16 items-center">
+    <div class="reveal-left">
+      <h2 class="text-4xl font-bold mb-6">Keahlian & <span class="text-primary">Tools</span></h2>
+      <p class="text-gray-600 mb-10 leading-relaxed">Tools dan platform yang saya gunakan untuk menganalisis data, membuat konten, dan menjalankan strategi pemasaran digital.</p>
+      <div class="space-y-8">
+        <div>
+          <h6 class="text-xs font-bold uppercase tracking-widest text-primary mb-4">Analisis & BI</h6>
+          <div class="flex flex-wrap gap-3">
+            <span class="skill-tag px-4 py-2 bg-white rounded-lg border border-primary/10 text-sm font-medium cursor-pointer">Looker Studio</span>
+            <span class="skill-tag px-4 py-2 bg-white rounded-lg border border-primary/10 text-sm font-medium cursor-pointer">Microsoft Excel</span>
+            <span class="skill-tag px-4 py-2 bg-white rounded-lg border border-primary/10 text-sm font-medium cursor-pointer">Analisis Data</span>
+            <span class="skill-tag px-4 py-2 bg-white rounded-lg border border-primary/10 text-sm font-medium cursor-pointer">Google Analytics</span>
+          </div>
+        </div>
+        <div>
+          <h6 class="text-xs font-bold uppercase tracking-widest text-primary mb-4">Kreativitas & Desain</h6>
+          <div class="flex flex-wrap gap-3">
+            <span class="skill-tag px-4 py-2 bg-white rounded-lg border border-primary/10 text-sm font-medium cursor-pointer">Canva</span>
+            <span class="skill-tag px-4 py-2 bg-white rounded-lg border border-primary/10 text-sm font-medium cursor-pointer">Content Creation</span>
+            <span class="skill-tag px-4 py-2 bg-white rounded-lg border border-primary/10 text-sm font-medium cursor-pointer">TikTok Creator</span>
+            <span class="skill-tag px-4 py-2 bg-white rounded-lg border border-primary/10 text-sm font-medium cursor-pointer">Design Product</span>
+          </div>
+        </div>
+        <div>
+          <h6 class="text-xs font-bold uppercase tracking-widest text-primary mb-4">Produktivitas</h6>
+          <div class="flex flex-wrap gap-3">
+            <span class="skill-tag px-4 py-2 bg-white rounded-lg border border-primary/10 text-sm font-medium cursor-pointer">Microsoft Word</span>
+            <span class="skill-tag px-4 py-2 bg-white rounded-lg border border-primary/10 text-sm font-medium cursor-pointer">PowerPoint</span>
+            <span class="skill-tag px-4 py-2 bg-white rounded-lg border border-primary/10 text-sm font-medium cursor-pointer">Komunikatif</span>
+            <span class="skill-tag px-4 py-2 bg-white rounded-lg border border-primary/10 text-sm font-medium cursor-pointer">Team Work</span>
+          </div>
+        </div>
+        <div>
+          <h6 class="text-xs font-bold uppercase tracking-widest text-primary mb-4">Development</h6>
+          <div class="flex flex-wrap gap-3">
+            <span class="skill-tag px-4 py-2 bg-white rounded-lg border border-primary/10 text-sm font-medium cursor-pointer">HTML</span>
+            <span class="skill-tag px-4 py-2 bg-white rounded-lg border border-primary/10 text-sm font-medium cursor-pointer">CSS</span>
+            <span class="skill-tag px-4 py-2 bg-white rounded-lg border border-primary/10 text-sm font-medium cursor-pointer">JavaScript</span>
+            <span class="skill-tag px-4 py-2 bg-white rounded-lg border border-primary/10 text-sm font-medium cursor-pointer">Figma</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="relative reveal-right mt-12 lg:mt-0 flex justify-center">
+      <div class="size-64 sm:size-80 md:size-[400px] bg-white rounded-full p-6 sm:p-8 luxury-shadow border border-primary/5 flex items-center justify-center">
+        <div class="grid grid-cols-3 gap-4 sm:gap-6">
+          <div class="size-12 sm:size-16 rounded-xl bg-primary/5 flex items-center justify-center text-primary float-icon" style="animation-delay:0s"><span class="material-symbols-outlined text-xl sm:text-3xl">dashboard</span></div>
+          <div class="size-12 sm:size-16 rounded-xl bg-primary flex items-center justify-center text-white float-icon" style="animation-delay:0.2s"><span class="material-symbols-outlined text-xl sm:text-3xl">table_chart</span></div>
+          <div class="size-12 sm:size-16 rounded-xl bg-primary/5 flex items-center justify-center text-primary float-icon" style="animation-delay:0.4s"><span class="material-symbols-outlined text-xl sm:text-3xl">insights</span></div>
+          <div class="size-12 sm:size-16 rounded-xl bg-primary flex items-center justify-center text-white float-icon" style="animation-delay:0.6s"><span class="material-symbols-outlined text-xl sm:text-3xl">auto_awesome</span></div>
+          <div class="size-12 sm:size-16 rounded-xl bg-primary/5 flex items-center justify-center text-primary float-icon" style="animation-delay:0.8s">
+            <svg class="w-5 h-5 sm:w-7 sm:h-7 fill-primary" viewBox="0 0 448 512"><path d="M448 209.91a210.06 210.06 0 0 1-122.77-39.25V349.38A162.55 162.55 0 1 1 185 188.31V278.2a74.62 74.62 0 1 0 52.23 71.18V0l88 0a121.18 121.18 0 0 0 1.86 22.17h0A122.18 122.18 0 0 0 381 102.39a121.43 121.43 0 0 0 67 20.14Z"/></svg>
+          </div>
+          <div class="size-12 sm:size-16 rounded-xl bg-primary flex items-center justify-center text-white float-icon" style="animation-delay:1s"><span class="material-symbols-outlined text-xl sm:text-3xl">code</span></div>
+          <div class="size-12 sm:size-16 rounded-xl bg-primary/5 flex items-center justify-center text-primary float-icon" style="animation-delay:1.2s"><span class="material-symbols-outlined text-xl sm:text-3xl">terminal</span></div>
+          <div class="size-12 sm:size-16 rounded-xl bg-primary flex items-center justify-center text-white float-icon" style="animation-delay:1.4s"><span class="material-symbols-outlined text-xl sm:text-3xl">design_services</span></div>
+          <div class="size-12 sm:size-16 rounded-xl bg-primary/5 flex items-center justify-center text-primary float-icon" style="animation-delay:1.6s"><span class="material-symbols-outlined text-xl sm:text-3xl">article</span></div>
+        </div>
+      </div>
+      <div class="absolute -top-5 -right-5 sm:-top-10 sm:-right-10 size-20 sm:size-32 border-2 border-primary/20 rounded-full animate-pulse"></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- Experience & Education Timeline -->
+<section class="py-24 bg-white" id="experience">
+<div class="max-w-5xl mx-auto px-6">
+  <div class="text-center mb-16 reveal">
+    <h2 class="text-3xl font-bold mb-4">Pengalaman & Pendidikan</h2>
+    <p class="text-gray-500">Perjalanan profesional dan akademik saya.</p>
+  </div>
+  <div class="grid md:grid-cols-2 gap-16">
+    <!-- Pengalaman -->
+    <div class="reveal-left">
+      <h3 class="text-xl font-bold mb-8 flex items-center gap-3"><span class="material-symbols-outlined text-primary">work</span>Pengalaman Kerja</h3>
+      <div class="space-y-8">
+        <div class="tl-item">
+          <p class="text-xs text-primary font-bold uppercase tracking-wider">2023 — Sekarang</p>
+          <h4 class="font-bold text-lg mt-1">Content Creator TikTok</h4>
+          <p class="text-gray-500 text-sm mt-1">Membuat konten kreatif bertema musik, menghasilkan video viral 1 Juta+ penonton.</p>
+        </div>
+        <div class="tl-item">
+          <p class="text-xs text-primary font-bold uppercase tracking-wider">2024</p>
+          <h4 class="font-bold text-lg mt-1">Host Live & Design Product</h4>
+          <p class="text-gray-500 text-sm mt-1">Mempromosikan produk secara komunikatif & membuat desain visual branding.</p>
+        </div>
+        <div class="tl-item">
+          <p class="text-xs text-primary font-bold uppercase tracking-wider">2024</p>
+          <h4 class="font-bold text-lg mt-1">BI Intern — Distrinesia</h4>
+          <p class="text-gray-500 text-sm mt-1">Membantu pembuatan dashboard analisis menggunakan Looker Studio untuk mendukung pengambilan keputusan bisnis.</p>
+        </div>
+        <div class="tl-item">
+          <p class="text-xs text-primary font-bold uppercase tracking-wider">2020 — 2022</p>
+          <h4 class="font-bold text-lg mt-1">Entrepreneur UMKM</h4>
+          <p class="text-gray-500 text-sm mt-1">Mengelola operasional harian outlet franchise KAM-SIA BOBA Indonesia, Cigudeg.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Pendidikan & Organisasi -->
+    <div class="reveal-right">
+      <h3 class="text-xl font-bold mb-8 flex items-center gap-3"><span class="material-symbols-outlined text-primary">school</span>Pendidikan & Organisasi</h3>
+      <div class="space-y-8">
+        <div class="tl-item">
+          <p class="text-xs text-primary font-bold uppercase tracking-wider">2023 — Sekarang</p>
+          <h4 class="font-bold text-lg mt-1">Universitas Ibn Khaldun Bogor</h4>
+          <p class="text-gray-500 text-sm mt-1">Program Studi Bisnis Digital</p>
+        </div>
+        <div class="tl-item">
+          <p class="text-xs text-primary font-bold uppercase tracking-wider">2023</p>
+          <h4 class="font-bold text-lg mt-1">SMAN 1 Cigudeg</h4>
+          <p class="text-gray-500 text-sm mt-1">Program Studi Bisnis Digital</p>
+        </div>
+        <div class="tl-item">
+          <p class="text-xs text-primary font-bold uppercase tracking-wider">2024</p>
+          <h4 class="font-bold text-lg mt-1">Koordinator PDDL</h4>
+          <p class="text-gray-500 text-sm mt-1">Field Trip Cyber University, Jakarta Selatan — Mengelola koordinasi peserta, logistik, dan kegiatan di lapangan.</p>
+        </div>
+        <div class="tl-item">
+          <p class="text-xs text-primary font-bold uppercase tracking-wider">2024</p>
+          <h4 class="font-bold text-lg mt-1">Koordinator Divisi Acara</h4>
+          <p class="text-gray-500 text-sm mt-1">BUBARAN DIGSITY — Mengatur perencanaan, koordinasi, dan pelaksanaan acara.</p>
+        </div>
+        <div class="tl-item">
+          <p class="text-xs text-primary font-bold uppercase tracking-wider">2024</p>
+          <h4 class="font-bold text-lg mt-1">Divisi People Org. Development</h4>
+          <p class="text-gray-500 text-sm mt-1">Bisnis Digital UIKA — Berkontribusi dalam kegiatan pengembangan organisasi dan program internal.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- Testimonial / Quote Section -->
+<section class="py-20 bg-bg-light">
+<div class="max-w-3xl mx-auto px-6 text-center reveal">
+  <div class="relative bg-white rounded-2xl p-12 border border-primary/10 luxury-shadow">
+    <span class="quote-mark">"</span>
+    <p class="text-2xl font-light italic leading-relaxed text-[#1a170f]/80 mt-6">
+      Saya percaya bahwa teknologi dan kreativitas bisa berjalan bersama untuk menciptakan dampak nyata di dunia digital.
+    </p>
+    <div class="mt-8 flex items-center justify-center gap-4">
+      <div class="w-12 h-0.5 bg-primary"></div>
+      <p class="text-sm font-bold text-primary uppercase tracking-widest">Akbar Supia Dirja</p>
+      <div class="w-12 h-0.5 bg-primary"></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- Contact Section -->
+<section class="py-24 bg-bg-light" id="contact">
+<div class="max-w-3xl mx-auto px-6">
+  <div class="text-center mb-16 reveal">
+    <h2 class="text-4xl font-bold mb-4">Hubungi Saya</h2>
+    <p class="text-gray-500">Tertarik berkolaborasi? Jangan ragu untuk menghubungi saya.</p>
+  </div>
+  <!-- Contact Info Cards -->
+  <div class="grid sm:grid-cols-3 gap-4 mb-12 reveal">
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=akbarsupiad20@gmail.com" target="_blank" class="flex flex-col items-center gap-2 p-6 bg-white rounded-xl border border-primary/10 hover:border-primary/40 transition-all luxury-shadow group">
+      <span class="material-symbols-outlined text-primary text-2xl group-hover:scale-110 transition-transform">mail</span>
+      <span class="text-xs text-gray-500 font-medium">Email</span>
+      <span class="text-sm font-semibold text-center break-all">akbarsupiad20@gmail.com</span>
+    </a>
+    <a href="tel:081386176205" class="flex flex-col items-center gap-2 p-6 bg-white rounded-xl border border-primary/10 hover:border-primary/40 transition-all luxury-shadow group">
+      <span class="material-symbols-outlined text-primary text-2xl group-hover:scale-110 transition-transform">phone</span>
+      <span class="text-xs text-gray-500 font-medium">Telepon</span>
+      <span class="text-sm font-semibold">081386176205</span>
+    </a>
+    <a href="https://www.linkedin.com/in/akbar-supia-dirja-7071192ba" target="_blank" class="flex flex-col items-center gap-2 p-6 bg-white rounded-xl border border-primary/10 hover:border-primary/40 transition-all luxury-shadow group">
+      <span class="material-symbols-outlined text-primary text-2xl group-hover:scale-110 transition-transform">person</span>
+      <span class="text-xs text-gray-500 font-medium">LinkedIn</span>
+      <span class="text-sm font-semibold">Akbar Supia Dirja</span>
+    </a>
+  </div>
+  <form id="contact-form" class="space-y-6 reveal">
+    <div class="grid md:grid-cols-2 gap-6">
+      <div>
+        <label class="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">Nama Lengkap</label>
+        <input class="w-full px-5 py-4 bg-white border border-primary/10 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="Nama Anda" type="text" name="name"/>
+      </div>
+      <div>
+        <label class="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">Email</label>
+        <input class="w-full px-5 py-4 bg-white border border-primary/10 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="email@example.com" type="email" name="email"/>
+      </div>
+    </div>
+    <div>
+      <label class="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">Subjek</label>
+      <select class="w-full px-5 py-4 bg-white border border-primary/10 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" name="subject">
+        <option>Kolaborasi Proyek</option>
+        <option>Konsultasi Digital Marketing</option>
+        <option>Business Intelligence</option>
+        <option>Content Creation</option>
+        <option>Lainnya</option>
+      </select>
+    </div>
+    <div>
+      <label class="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">Pesan</label>
+      <textarea class="w-full px-5 py-4 bg-white border border-primary/10 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="Tuliskan pesan Anda..." rows="5" name="message"></textarea>
+    </div>
+    <button type="submit" class="w-full py-5 bg-primary text-white rounded-xl font-bold text-lg hover:opacity-90 transition-all luxury-shadow">Kirim Pesan</button>
+  </form>
+</div>
+</section>
+</main>
+
+<!-- Footer -->
+<footer class="bg-bg-dark text-white/80 py-16">
+<div class="max-w-7xl mx-auto px-6">
+  <div class="flex flex-col md:flex-row justify-between items-center gap-10">
+    <div class="flex items-center gap-2">
+      <div class="size-8 flex items-center justify-center rounded-lg bg-primary text-white"><span class="material-symbols-outlined text-lg">terminal</span></div>
+      <span class="text-xl font-bold tracking-tight text-white">AKBAR<span class="text-primary">.</span></span>
+    </div>
+    <div class="flex items-center gap-6">
+      <a class="size-10 flex items-center justify-center rounded-full bg-white/5 hover:bg-primary/20 transition-all" href="https://www.linkedin.com/in/akbar-supia-dirja-7071192ba" target="_blank" title="LinkedIn">
+        <svg class="w-5 h-5 fill-white" viewBox="0 0 24 24"><path d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14m-.5 15.5v-5.3a3.26 3.26 0 00-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 011.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 001.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 00-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+      </a>
+      <a class="size-10 flex items-center justify-center rounded-full bg-white/5 hover:bg-primary/20 transition-all" href="https://www.tiktok.com/@akbarr_sdrja?_r=1&_t=ZS-941xR7HFO2p" target="_blank" title="TikTok">
+        <svg class="w-5 h-5 fill-white" viewBox="0 0 448 512"><path d="M448 209.91a210.06 210.06 0 0 1-122.77-39.25V349.38A162.55 162.55 0 1 1 185 188.31V278.2a74.62 74.62 0 1 0 52.23 71.18V0l88 0a121.18 121.18 0 0 0 1.86 22.17h0A122.18 122.18 0 0 0 381 102.39a121.43 121.43 0 0 0 67 20.14Z"/></svg>
+      </a>
+      <a class="size-10 flex items-center justify-center rounded-full bg-white/5 hover:bg-primary/20 transition-all" href="https://www.instagram.com/akbarsdrjaa_?igsh=ZXk2cGtrdGs2eWF6&utm_source=qr" target="_blank" title="Instagram">
+        <svg class="w-5 h-5 fill-white" viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 01-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 017.8 2m-.2 2A3.6 3.6 0 004 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 003.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5M12 7a5 5 0 110 10 5 5 0 010-10m0 2a3 3 0 100 6 3 3 0 000-6z"/></svg>
+      </a>
+      <a class="size-10 flex items-center justify-center rounded-full bg-white/5 hover:bg-primary/20 transition-all" href="https://mail.google.com/mail/?view=cm&fs=1&to=akbarsupiad20@gmail.com" target="_blank" title="Gmail">
+        <svg class="w-5 h-5 fill-white" viewBox="0 0 24 24"><path d="M20 8l-8 5-8-5V6l8 5 8-5m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2z"/></svg>
+      </a>
+    </div>
+    <div class="text-sm text-gray-500">© 2026 Akbar Supia Dirja. All rights reserved.</div>
+  </div>
+  <div class="mt-12 pt-8 border-t border-white/5 text-center text-xs tracking-widest uppercase text-gray-600">
+    Bisnis Digital • Business Intelligence • Content Creator
+  </div>
+</div>
+</footer>
+
+<!-- Back to Top -->
+<button id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed bottom-8 right-8 z-50 size-12 bg-primary text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
+  <span class="material-symbols-outlined">keyboard_arrow_up</span>
+</button>
+
+<script>
+// Preloader
+window.addEventListener('load', () => {
+  setTimeout(() => document.getElementById('preloader').classList.add('hide'), 200);
+});
+// Fallback to hide preloader if load takes too long
+setTimeout(() => document.getElementById('preloader').classList.add('hide'), 3000);
+
+// Dark Mode Toggle
+function toggleDarkMode() {
+  document.documentElement.classList.toggle('dark');
+  const isDark = document.documentElement.classList.contains('dark');
+  localStorage.setItem('darkMode', isDark);
+  const icon = isDark ? 'light_mode' : 'dark_mode';
+  const el = document.getElementById('dark-icon');
+  if(el) el.textContent = icon;
+  document.querySelectorAll('.dark-icon-mobile').forEach(e => e.textContent = icon);
+}
+// Restore dark mode
+if(localStorage.getItem('darkMode') === 'true') {
+  document.documentElement.classList.add('dark');
+  window.addEventListener('DOMContentLoaded', () => {
+    const el = document.getElementById('dark-icon');
+    if(el) el.textContent = 'light_mode';
+    document.querySelectorAll('.dark-icon-mobile').forEach(e => e.textContent = 'light_mode');
+  });
+}
+
+// Mobile Menu Toggle
+function toggleMobileMenu() {
+  document.getElementById('mobile-menu').classList.toggle('open');
+  document.getElementById('menu-overlay').classList.toggle('show');
+}
+
+// Rotating Typing Effect
+const roles = ['Content Creator', 'Web Development', 'Business Intelligence', 'Digital Marketer', 'Entrepreneur'];
+let roleIndex = 0, charIndex = 0, isDeleting = false;
+function typeRole() {
+  const el = document.getElementById('typed-role');
+  if(!el) return;
+  const current = roles[roleIndex];
+  if(isDeleting) {
+    el.textContent = current.substring(0, charIndex--);
+    if(charIndex < 0) { isDeleting = false; roleIndex = (roleIndex + 1) % roles.length; setTimeout(typeRole, 400); return; }
+  } else {
+    el.textContent = current.substring(0, ++charIndex);
+    if(charIndex === current.length) { isDeleting = true; setTimeout(typeRole, 2000); return; }
+  }
+  setTimeout(typeRole, isDeleting ? 40 : 80);
+}
+setTimeout(typeRole, 1500);
+
+// Custom Cursor
+const cursorDot = document.querySelector('.cursor-dot');
+const cursorRing = document.querySelector('.cursor-ring');
+if(cursorDot && cursorRing && window.innerWidth > 768) {
+  document.addEventListener('mousemove', e => {
+    cursorDot.style.left = e.clientX - 4 + 'px';
+    cursorDot.style.top = e.clientY - 4 + 'px';
+    cursorRing.style.left = e.clientX - 17.5 + 'px';
+    cursorRing.style.top = e.clientY - 17.5 + 'px';
+  });
+  document.querySelectorAll('a, button, .skill-tag, .group').forEach(el => {
+    el.addEventListener('mouseenter', () => { cursorRing.style.width = '50px'; cursorRing.style.height = '50px'; cursorRing.style.left = parseFloat(cursorRing.style.left) - 7.5 + 'px'; cursorRing.style.top = parseFloat(cursorRing.style.top) - 7.5 + 'px'; });
+    el.addEventListener('mouseleave', () => { cursorRing.style.width = '35px'; cursorRing.style.height = '35px'; });
+  });
+}
+
+// Scroll Progress Bar
+window.addEventListener('scroll', () => {
+  const h = document.documentElement.scrollHeight - window.innerHeight;
+  const p = (window.scrollY / h) * 100;
+  document.getElementById('scroll-progress').style.width = p + '%';
+});
+
+// Scroll Reveal Animation
+const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('active'); revealObserver.unobserve(e.target); }});
+}, { threshold: 0.15 });
+revealEls.forEach(el => revealObserver.observe(el));
+
+// Counter Animation
+const counters = document.querySelectorAll('.count-up');
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if(e.isIntersecting) {
+      const target = +e.target.dataset.target;
+      let current = 0;
+      const step = Math.max(1, Math.floor(target / 40));
+      const timer = setInterval(() => {
+        current += step;
+        if(current >= target) { current = target; clearInterval(timer); }
+        e.target.textContent = current;
+      }, 40);
+      counterObserver.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.5 });
+counters.forEach(c => counterObserver.observe(c));
+
+// Back to Top Button
+window.addEventListener('scroll', () => {
+  document.getElementById('back-top').classList.toggle('show', window.scrollY > 400);
+});
+
+// Active nav highlight
+const sections = document.querySelectorAll('section[id]');
+window.addEventListener('scroll', () => {
+  const scrollY = window.scrollY + 100;
+  sections.forEach(s => {
+    const top = s.offsetTop - 100, h = s.offsetHeight, id = s.id;
+    const link = document.querySelector(`nav a[href="#${id}"]`);
+    if(link) link.classList.toggle('text-primary', scrollY >= top && scrollY < top + h);
+  });
+});
+
+// Lazy Video Loading
+const lazyVideos = document.querySelectorAll('.lazy-video');
+if ('IntersectionObserver' in window) {
+  const videoObserver = new IntersectionObserver((entries) => {
+    entries.forEach(video => {
+      if (video.isIntersecting) {
+        const videoEl = video.target;
+        const source = videoEl.querySelector('source');
+        if (source.dataset.src) {
+          source.src = source.dataset.src;
+          videoEl.load();
+          videoEl.play();
+          source.removeAttribute('data-src');
+        }
+        videoObserver.unobserve(videoEl);
+      }
+    });
+  }, { threshold: 0.1 });
+  lazyVideos.forEach(v => videoObserver.observe(v));
+}
+
+// Contact Form Handler
+document.getElementById('contact-form')?.addEventListener('submit', function(e) {
+  e.preventDefault();
+  const name = this.querySelector('[name="name"]').value;
+  const email = this.querySelector('[name="email"]').value;
+  const subject = this.querySelector('[name="subject"]').value;
+  const message = this.querySelector('[name="message"]').value;
+  
+  const body = `Nama: ${name}\nEmail: ${email}\n\nPesan:\n${message}`;
+  const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=akbarsupiad20@gmail.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  
+  window.open(gmailUrl, '_blank');
+});
+</script>
+</body>
+</html>
