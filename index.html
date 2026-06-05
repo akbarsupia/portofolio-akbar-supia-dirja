@@ -18,9 +18,9 @@ tailwind.config = {
   theme: {
     extend: {
       colors: {
-        "primary": "#d4af35",
-        "bg-light": "#fbfbf9",
-        "bg-dark": "#201d12",
+        "primary": "#2563eb",
+        "bg-light": "#f8fafc",
+        "bg-dark": "#0f172a",
       },
       fontFamily: { "display": ["Inter", "sans-serif"] },
     },
@@ -31,35 +31,35 @@ tailwind.config = {
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Inter',sans-serif;overflow-x:hidden;transition:background .4s,color .4s}
 html{scroll-behavior:smooth}
-.luxury-shadow{box-shadow:0 10px 30px -15px rgba(212,175,53,.15)}
-.gold-gradient{background:linear-gradient(135deg,#d4af35 0%,#f2d472 100%)}
+.luxury-shadow{box-shadow:0 10px 30px -15px rgba(37,99,235,.15)}
+.blue-gradient{background:linear-gradient(135deg,#2563eb 0%,#60a5fa 100%)}
 
 /* Dark Mode */
-.dark body,.dark .bg-bg-light{background:#141110!important;color:#e8e0d0!important}
-.dark .bg-white,.dark .bg-bg-light{background:#1c1916!important}
-.dark header{background:rgba(20,17,16,.85)!important;border-color:rgba(212,175,53,.15)!important}
-.dark .text-\[#1a170f\],.dark .text-\[#1a170f\]\/70,.dark .text-\[#1a170f\]\/80{color:#e8e0d0!important}
-.dark .text-gray-500,.dark .text-gray-600,.dark .text-gray-400{color:#a89e8e!important}
-.dark .border-primary\/10{border-color:rgba(212,175,53,.15)!important}
-.dark .bg-gray-100{background:#252220!important}
-.dark #mobile-menu{background:#1c1916!important}
-.dark #preloader{background:#141110!important}
-.dark input,.dark textarea,.dark select{background:#252220!important;color:#e8e0d0!important;border-color:rgba(212,175,53,.2)!important}
-.dark h1,.dark h2,.dark h3,.dark h4,.dark h5,.dark h6,.dark p,.dark li,.dark span:not(.skill-tag){color:#e8e0d0!important}
-.dark .text-primary{color:#d4af35!important}
+.dark body,.dark .bg-bg-light{background:#0b0f19!important;color:#f1f5f9!important}
+.dark .bg-white,.dark .bg-bg-light{background:#111827!important}
+.dark header{background:rgba(11,15,25,.85)!important;border-color:rgba(37,99,235,.15)!important}
+.dark .text-\[#0f172a\],.dark .text-\[#0f172a\]\/70,.dark .text-\[#0f172a\]\/80{color:#f1f5f9!important}
+.dark .text-gray-500,.dark .text-gray-600,.dark .text-gray-400{color:#94a3b8!important}
+.dark .border-primary\/10{border-color:rgba(37,99,235,.15)!important}
+.dark .bg-gray-100{background:#1f2937!important}
+.dark #mobile-menu{background:#111827!important}
+.dark #preloader{background:#0b0f19!important}
+.dark input,.dark textarea,.dark select{background:#1f2937!important;color:#f1f5f9!important;border-color:rgba(37,99,235,.2)!important}
+.dark h1,.dark h2,.dark h3,.dark h4,.dark h5,.dark h6,.dark p,.dark li,.dark span:not(.skill-tag){color:#f1f5f9!important}
+.dark .text-primary{color:#2563eb!important}
 
 /* Scroll Progress */
-#scroll-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#d4af35,#f2d472);z-index:9998;width:0;transition:width .1s}
+#scroll-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#2563eb,#60a5fa);z-index:9998;width:0;transition:width .1s}
 
 /* Custom Cursor */
-.cursor-dot{position:fixed;width:8px;height:8px;background:#d4af35;border-radius:50%;pointer-events:none;z-index:9997;transition:transform .15s;mix-blend-mode:difference}
-.cursor-ring{position:fixed;width:35px;height:35px;border:2px solid rgba(212,175,53,.5);border-radius:50%;pointer-events:none;z-index:9997;transition:transform .3s,width .3s,height .3s;mix-blend-mode:difference}
-@media(max-width:768px){.cursor-dot,.cursor-ring{display:none}}
+.cursor-dot{position:fixed;width:8px;height:8px;background:#2563eb;border-radius:50%;pointer-events:none;z-index:9997;transition:transform .15s;opacity:0;transition:opacity 0.3s ease}
+.cursor-ring{position:fixed;width:35px;height:35px;border:2px solid rgba(37,99,235,.5);border-radius:50%;pointer-events:none;z-index:9997;transition:transform .3s,width .3s,height .3s;opacity:0;transition:opacity 0.3s ease}
+@media(max-width:768px){.cursor-dot,.cursor-ring{display:none!important}}
 
 /* Preloader */
-#preloader{position:fixed;inset:0;z-index:9999;background:#fbfbf9;display:flex;align-items:center;justify-content:center;transition:opacity .6s}
+#preloader{position:fixed;inset:0;z-index:9999;background:#f8fafc;display:flex;align-items:center;justify-content:center;transition:opacity .6s}
 #preloader.hide{opacity:0;pointer-events:none}
-.loader{width:50px;height:50px;border:4px solid #d4af35;border-top-color:transparent;border-radius:50%;animation:spin .8s linear infinite}
+.loader{width:50px;height:50px;border:4px solid #2563eb;border-top-color:transparent;border-radius:50%;animation:spin .8s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
 
 /* Scroll Reveal */
@@ -73,7 +73,7 @@ html{scroll-behavior:smooth}
 .reveal-right.active{opacity:1;transform:translateX(0)}
 
 /* Particles */
-.particle{position:absolute;border-radius:50%;background:rgba(212,175,53,.15);animation:float 6s infinite ease-in-out}
+.particle{position:absolute;border-radius:50%;background:rgba(37,99,235,.15);animation:float 6s infinite ease-in-out}
 @keyframes float{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-20px) scale(1.1)}}
 
 /* Mobile Menu */
@@ -90,41 +90,41 @@ html{scroll-behavior:smooth}
 #back-top.show{opacity:1;transform:translateY(0)}
 
 /* Timeline */
-.tl-item{position:relative;padding-left:2rem;border-left:2px solid rgba(212,175,53,.2)}
-.tl-item::before{content:'';position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;background:#d4af35}
+.tl-item{position:relative;padding-left:2rem;border-left:2px solid rgba(37,99,235,.2)}
+.tl-item::before{content:'';position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;background:#2563eb}
 
 /* Typing cursor */
-.type-cursor::after{content:'|';animation:blink 1s step-end infinite;color:#d4af35}
+.type-cursor::after{content:'|';animation:blink 1s step-end infinite;color:#2563eb}
 @keyframes blink{50%{opacity:0}}
 
 /* Project overlay */
-.proj-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(26,23,15,.85),transparent);opacity:0;transition:opacity .4s;display:flex;align-items:flex-end;padding:1.5rem;border-radius:.75rem}
+.proj-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(15,23,42,.85),transparent);opacity:0;transition:opacity .4s;display:flex;align-items:flex-end;padding:1.5rem;border-radius:.75rem}
 .group:hover .proj-overlay{opacity:1}
 
 /* Skill tag hover */
 .skill-tag{transition:all .3s}
-.skill-tag:hover{background:#d4af35;color:#fff;transform:translateY(-2px);box-shadow:0 4px 15px rgba(212,175,53,.3)}
+.skill-tag:hover{background:#2563eb;color:#fff;transform:translateY(-2px);box-shadow:0 4px 15px rgba(37,99,235,.3)}
 
 /* 3D Tilt */
 .tilt-card{transition:transform .4s cubic-bezier(.16,1,.3,1);transform-style:preserve-3d}
 .tilt-card:hover{transform:perspective(1000px) rotateY(-3deg) rotateX(3deg) scale(1.02)}
 
 /* Gradient Text */
-.gradient-text{background:linear-gradient(135deg,#d4af35 0%,#f2d472 50%,#d4af35 100%);background-size:200% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:shimmer 3s linear infinite}
+.gradient-text{background:linear-gradient(135deg,#2563eb 0%,#60a5fa 50%,#2563eb 100%);background-size:200% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:shimmer 3s linear infinite}
 @keyframes shimmer{to{background-position:200% center}}
 
 /* Testimonial */
-.quote-mark{font-size:5rem;line-height:1;color:rgba(212,175,53,.15);font-family:Georgia,serif;position:absolute;top:-10px;left:0}
+.quote-mark{font-size:5rem;line-height:1;color:rgba(37,99,235,.15);font-family:Georgia,serif;position:absolute;top:-10px;left:0}
 
 /* Browser Frame */
-.browser-window { background: #fff; border-radius: 12px; overflow: hidden; border: 1px solid rgba(212,175,53,.15); box-shadow: 0 20px 50px -20px rgba(0,0,0,0.1); position: relative; }
+.browser-window { background: #fff; border-radius: 12px; overflow: hidden; border: 1px solid rgba(37,99,235,.15); box-shadow: 0 20px 50px -20px rgba(0,0,0,0.1); position: relative; }
 .browser-header { background: rgba(0,0,0,0.03); padding: 10px 14px; display: flex; align-items: center; gap: 6px; border-bottom: 1px solid rgba(0,0,0,0.05); }
 .browser-dot { width: 8px; height: 8px; border-radius: 50%; }
 .dot-red { background: #ff5f56; }
 .dot-yellow { background: #ffbd2e; }
 .dot-green { background: #27c93f; }
 .browser-address { height: 10px; flex: 1; background: #fff; border-radius: 4px; margin-left: 10px; opacity: 0.6; }
-.dark .browser-window { background: #1a1714; border-color: rgba(212,175,53,0.1); }
+.dark .browser-window { background: #111827; border-color: rgba(37,99,235,0.1); }
 .dark .browser-header { background: rgba(255,255,255,0.03); }
 .dark .browser-address { background: rgba(255,255,255,0.05); }
 
@@ -134,9 +134,16 @@ html{scroll-behavior:smooth}
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
 }
+
+/* Floating Image */
+.float-img { animation: float-img 6s infinite ease-in-out; }
+@keyframes float-img {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
 </style>
 </head>
-<body class="bg-bg-light text-[#1a170f] selection:bg-primary/30">
+<body class="bg-bg-light text-[#0f172a] selection:bg-primary/30">
 
 <!-- Scroll Progress Bar -->
 <div id="scroll-progress"></div>
@@ -212,7 +219,7 @@ html{scroll-behavior:smooth}
         Halo, Saya <br/><span class="gradient-text" id="typed-name">Akbar Supia Dirja</span>
       </h1>
       <p class="text-lg sm:text-2xl font-semibold text-primary mb-6"><span id="typed-role">Content Creator</span><span class="type-cursor"></span></p>
-      <p class="text-base sm:text-lg text-[#1a170f]/70 max-w-xl mb-10 leading-relaxed font-light">
+      <p class="text-base sm:text-lg text-[#0f172a]/70 max-w-xl mb-10 leading-relaxed font-light">
         Mahasiswa Bisnis Digital yang aktif dan berpengalaman dalam pengembangan sistem informasi, pembuatan website, analisis data, dan pembuatan dashboard. Terbiasa berkomunikasi, bekerja sama dalam tim, dan mengelola organisasi.
       </p>
       <div class="flex flex-wrap gap-4">
@@ -225,10 +232,10 @@ html{scroll-behavior:smooth}
       </div>
     </div>
     <div class="order-1 lg:order-2 relative group reveal-right flex justify-center lg:justify-end">
-      <div class="relative max-w-[300px] sm:max-w-[400px] w-full">
+      <div class="relative max-w-[300px] sm:max-w-[400px] w-full float-img">
         <div class="absolute -inset-4 bg-primary/5 rounded-3xl blur-2xl group-hover:bg-primary/10 transition-all"></div>
         <div class="relative bg-white p-2 sm:p-3 rounded-3xl shadow-2xl border border-primary/10 overflow-hidden">
-          <img alt="Akbar Supia Dirja" class="rounded-2xl w-full object-cover aspect-[4/5] hover:scale-105 transition-transform duration-500" src="assets/images/poto-akbar.jpg" decoding="async"/>
+          <img alt="Akbar Supia Dirja" class="rounded-2xl w-full object-cover aspect-[4/5] hover:scale-105 transition-transform duration-500" src="assets/images/Foto Akbar2.jpeg" decoding="async"/>
         </div>
       </div>
     </div>
@@ -237,17 +244,51 @@ html{scroll-behavior:smooth}
 
 <!-- About Section -->
 <section class="py-24 bg-white" id="about">
-<div class="max-w-4xl mx-auto px-6 text-center reveal">
-  <h2 class="text-3xl font-bold mb-8">Tentang Saya</h2>
-  <div class="w-20 h-1 bg-primary mx-auto mb-10"></div>
-  <p class="text-xl leading-relaxed text-[#1a170f]/80 font-light italic mb-8">
-    "Mahasiswa Bisnis Digital yang aktif dan berpengalaman dalam pengembangan sistem informasi, analisis data, dan pembuatan dashboard menggunakan Looker Studio. Memiliki pengalaman kerja di dunia UMKM, perancangan aplikasi berbasis website, serta konten digital. Tertarik pada Business Intelligence, pemasaran digital, dan pengembangan sistem pendukung keputusan."
-  </p>
-  <div class="grid grid-cols-2 md:grid-cols-4 gap-8 py-10 border-y border-primary/10">
-    <div><p class="text-primary text-3xl font-bold"><span class="count-up" data-target="3">0</span>+</p><p class="text-sm font-medium uppercase tracking-widest text-gray-500">Tahun Pengalaman</p></div>
-    <div><p class="text-primary text-3xl font-bold"><span class="count-up" data-target="1">0</span>M+</p><p class="text-sm font-medium uppercase tracking-widest text-gray-500">Views TikTok</p></div>
-    <div><p class="text-primary text-3xl font-bold"><span class="count-up" data-target="6">0</span>+</p><p class="text-sm font-medium uppercase tracking-widest text-gray-500">Proyek Selesai</p></div>
-    <div><p class="text-primary text-3xl font-bold"><span class="count-up" data-target="3">0</span>+</p><p class="text-sm font-medium uppercase tracking-widest text-gray-500">Organisasi</p></div>
+<div class="max-w-7xl mx-auto px-6">
+  <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+    <!-- Image Column -->
+    <div class="lg:col-span-5 relative group reveal-left order-2 lg:order-1 flex justify-center">
+      <div class="relative max-w-[320px] sm:max-w-[380px] w-full float-img">
+        <!-- Accent decorative blob background -->
+        <div class="absolute -inset-4 bg-primary/10 rounded-[2rem] blur-xl group-hover:bg-primary/15 transition-all duration-500"></div>
+        <!-- Decorative Border Grid (looks super premium) -->
+        <div class="absolute -right-4 -bottom-4 w-48 h-48 bg-[radial-gradient(#2563eb_2px,transparent_2px)] [background-size:16px_16px] opacity-20 -z-10"></div>
+        <!-- Main Image Card -->
+        <div class="relative bg-white p-3 rounded-[2rem] shadow-2xl border border-primary/10 overflow-hidden">
+          <img alt="Akbar Supia Dirja" class="rounded-[1.5rem] w-full object-cover aspect-[4/5] hover:scale-105 transition-transform duration-700" src="assets/images/Foto Akbar.jpeg" decoding="async"/>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Text Column -->
+    <div class="lg:col-span-7 reveal-right order-1 lg:order-2">
+      <h2 class="text-primary text-sm font-bold uppercase tracking-[0.3em] mb-3">Tentang Saya</h2>
+      <h3 class="text-3xl sm:text-4xl font-bold tracking-tight mb-6 text-[#0f172a] dark:text-white">Siapa Saya Sebenarnya?</h3>
+      <div class="w-16 h-1 bg-primary mb-8"></div>
+      <p class="text-lg leading-relaxed text-[#0f172a]/80 font-light mb-8 dark:text-gray-300">
+        Mahasiswa Bisnis Digital yang aktif dan berpengalaman dalam pengembangan sistem informasi, analisis data, dan pembuatan dashboard menggunakan Looker Studio. Memiliki pengalaman kerja di dunia UMKM, perancangan aplikasi berbasis website, serta konten digital. Tertarik pada Business Intelligence, pemasaran digital, dan pengembangan sistem pendukung keputusan.
+      </p>
+      
+      <!-- Stats Grid -->
+      <div class="grid grid-cols-2 gap-6 sm:gap-8 py-8 border-t border-primary/10">
+        <div>
+          <p class="text-primary text-3xl sm:text-4xl font-bold"><span class="count-up" data-target="3">0</span>+</p>
+          <p class="text-xs sm:text-sm font-semibold uppercase tracking-wider text-gray-500 mt-1">Tahun Pengalaman</p>
+        </div>
+        <div>
+          <p class="text-primary text-3xl sm:text-4xl font-bold"><span class="count-up" data-target="1">0</span>M+</p>
+          <p class="text-xs sm:text-sm font-semibold uppercase tracking-wider text-gray-500 mt-1">Views TikTok</p>
+        </div>
+        <div>
+          <p class="text-primary text-3xl sm:text-4xl font-bold"><span class="count-up" data-target="7">0</span>+</p>
+          <p class="text-xs sm:text-sm font-semibold uppercase tracking-wider text-gray-500 mt-1">Proyek Selesai</p>
+        </div>
+        <div>
+          <p class="text-primary text-3xl sm:text-4xl font-bold"><span class="count-up" data-target="3">0</span>+</p>
+          <p class="text-xs sm:text-sm font-semibold uppercase tracking-wider text-gray-500 mt-1">Organisasi</p>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 </section>
@@ -255,16 +296,16 @@ html{scroll-behavior:smooth}
 <!-- Expertise Section -->
 <section class="py-24 bg-bg-light" id="services">
 <div class="max-w-7xl mx-auto px-6">
-  <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6 reveal">
-    <div class="max-w-2xl">
-      <h2 class="text-primary text-sm font-bold uppercase tracking-[0.3em] mb-4">Bidang Keahlian</h2>
-      <h3 class="text-4xl font-bold tracking-tight">Yang Saya Kuasai</h3>
+  <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6 reveal">
+    <div class="max-w-2xl text-left">
+      <h2 class="text-primary text-sm font-bold uppercase tracking-[0.3em] mb-4 text-left">Bidang Keahlian</h2>
+      <h3 class="text-4xl font-bold tracking-tight text-left">Yang Saya Kuasai</h3>
     </div>
-    <p class="text-gray-500 max-w-sm">Menggabungkan kemampuan teknis dan kreatif untuk solusi digital yang efektif.</p>
+    <p class="text-gray-500 max-w-sm text-left">Menggabungkan kemampuan teknis dan kreatif untuk solusi digital yang efektif.</p>
   </div>
   <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
     <div class="group tilt-card bg-white p-6 md:p-10 rounded-2xl border border-primary/10 hover:border-primary/40 transition-all luxury-shadow reveal" style="transition-delay:.1s">
-      <div class="size-16 gold-gradient rounded-xl flex items-center justify-center text-white mb-8 group-hover:scale-110 transition-transform">
+      <div class="size-16 blue-gradient rounded-xl flex items-center justify-center text-white mb-8 group-hover:scale-110 transition-transform">
         <span class="material-symbols-outlined text-3xl">analytics</span>
       </div>
       <h4 class="text-xl font-bold mb-4">Business Intelligence</h4>
@@ -276,7 +317,7 @@ html{scroll-behavior:smooth}
       </ul>
     </div>
     <div class="group tilt-card bg-white p-6 md:p-10 rounded-2xl border border-primary/10 hover:border-primary/40 transition-all luxury-shadow reveal" style="transition-delay:.2s">
-      <div class="size-16 gold-gradient rounded-xl flex items-center justify-center text-white mb-8 group-hover:scale-110 transition-transform">
+      <div class="size-16 blue-gradient rounded-xl flex items-center justify-center text-white mb-8 group-hover:scale-110 transition-transform">
         <span class="material-symbols-outlined text-3xl">campaign</span>
       </div>
       <h4 class="text-xl font-bold mb-4">Digital Marketing</h4>
@@ -288,7 +329,7 @@ html{scroll-behavior:smooth}
       </ul>
     </div>
     <div class="group tilt-card bg-white p-6 md:p-10 rounded-2xl border border-primary/10 hover:border-primary/40 transition-all luxury-shadow reveal" style="transition-delay:.3s">
-      <div class="size-16 gold-gradient rounded-xl flex items-center justify-center text-white mb-8 group-hover:scale-110 transition-transform">
+      <div class="size-16 blue-gradient rounded-xl flex items-center justify-center text-white mb-8 group-hover:scale-110 transition-transform">
         <span class="material-symbols-outlined text-3xl">palette</span>
       </div>
       <h4 class="text-xl font-bold mb-4">Content Creation</h4>
@@ -300,7 +341,7 @@ html{scroll-behavior:smooth}
       </ul>
     </div>
     <div class="group tilt-card bg-white p-6 md:p-10 rounded-2xl border border-primary/10 hover:border-primary/40 transition-all luxury-shadow reveal" style="transition-delay:.4s">
-      <div class="size-16 gold-gradient rounded-xl flex items-center justify-center text-white mb-8 group-hover:scale-110 transition-transform">
+      <div class="size-16 blue-gradient rounded-xl flex items-center justify-center text-white mb-8 group-hover:scale-110 transition-transform">
         <span class="material-symbols-outlined text-3xl">language</span>
       </div>
       <h4 class="text-xl font-bold mb-4">Web Development</h4>
@@ -395,6 +436,42 @@ html{scroll-behavior:smooth}
       <h5 class="text-lg font-bold group-hover:text-primary transition-colors">Teen Mental Health Analysis</h5>
       <p class="text-sm text-gray-500 uppercase tracking-wider mt-1">Business Intelligence / Looker Studio</p>
     </a>
+    <a href="https://datastudio.google.com/reporting/a87fed1d-7a28-4ba0-96ab-61a6e62b3b95" target="_blank" class="group cursor-pointer reveal" style="transition-delay:.5s">
+      <div class="browser-window aspect-video mb-6 group-hover:translate-y-[-8px] transition-all duration-500 luxury-shadow">
+        <div class="browser-header">
+          <div class="browser-dot dot-red"></div>
+          <div class="browser-dot dot-yellow"></div>
+          <div class="browser-dot dot-green"></div>
+          <div class="browser-address"></div>
+        </div>
+        <div class="relative w-full h-[calc(100%-31px)] overflow-hidden bg-black">
+          <video class="lazy-video w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" muted loop playsinline preload="none">
+            <source data-src="assets/videos/projectretail.mp4" type="video/mp4">
+          </video>
+          <div class="proj-overlay"><div><p class="text-white font-bold text-lg">Retail Transaction Performance Dashboard</p><p class="text-white/80 text-sm mt-1">Dashboard analisis menggunakan Looker Studio</p></div></div>
+        </div>
+      </div>
+      <h5 class="text-lg font-bold group-hover:text-primary transition-colors">Retail Transaction Performance Dashboard</h5>
+      <p class="text-sm text-gray-500 uppercase tracking-wider mt-1">Business Intelligence / Looker Studio</p>
+    </a>
+    <div class="group cursor-pointer reveal" style="transition-delay:.6s">
+      <div class="browser-window aspect-video mb-6 group-hover:translate-y-[-8px] transition-all duration-500 luxury-shadow">
+        <div class="browser-header">
+          <div class="browser-dot dot-red"></div>
+          <div class="browser-dot dot-yellow"></div>
+          <div class="browser-dot dot-green"></div>
+          <div class="browser-address"></div>
+        </div>
+        <div class="relative w-full h-[calc(100%-31px)] overflow-hidden bg-black">
+          <video class="lazy-video w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" muted loop playsinline preload="none">
+            <source data-src="assets/videos/Enterprise  Professional Fleet Logistics Operations Dashboard.mp4" type="video/mp4">
+          </video>
+          <div class="proj-overlay"><div><p class="text-white font-bold text-lg">Logistics Operations Dashboard</p><p class="text-white/80 text-sm mt-1">Dashboard analisis operasional logistik dan armada menggunakan Looker Studio.</p></div></div>
+        </div>
+      </div>
+      <h5 class="text-lg font-bold group-hover:text-primary transition-colors">Logistics Operations Dashboard</h5>
+      <p class="text-sm text-gray-500 uppercase tracking-wider mt-1">Business Intelligence / Looker Studio</p>
+    </div>
   </div>
 </div>
 </section>
@@ -541,7 +618,7 @@ html{scroll-behavior:smooth}
 <div class="max-w-3xl mx-auto px-6 text-center reveal">
   <div class="relative bg-white rounded-2xl p-12 border border-primary/10 luxury-shadow">
     <span class="quote-mark">"</span>
-    <p class="text-2xl font-light italic leading-relaxed text-[#1a170f]/80 mt-6">
+    <p class="text-2xl font-light italic leading-relaxed text-[#0f172a]/80 mt-6">
       Saya percaya bahwa teknologi dan kreativitas bisa berjalan bersama untuk menciptakan dampak nyata di dunia digital.
     </p>
     <div class="mt-8 flex items-center justify-center gap-4">
@@ -562,20 +639,22 @@ html{scroll-behavior:smooth}
   </div>
   <!-- Contact Info Cards -->
   <div class="grid sm:grid-cols-3 gap-4 mb-12 reveal">
-    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=akbarsupiad20@gmail.com" target="_blank" class="flex flex-col items-center gap-2 p-6 bg-white rounded-xl border border-primary/10 hover:border-primary/40 transition-all luxury-shadow group">
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=akbarsupiad20@gmail.com" target="_blank" class="flex flex-col items-center gap-2 p-4 sm:p-3 md:p-6 bg-white rounded-xl border border-primary/10 hover:border-primary/40 transition-all luxury-shadow group">
       <span class="material-symbols-outlined text-primary text-2xl group-hover:scale-110 transition-transform">mail</span>
       <span class="text-xs text-gray-500 font-medium">Email</span>
-      <span class="text-sm font-semibold text-center break-all">akbarsupiad20@gmail.com</span>
+      <span class="text-xs md:text-sm font-semibold text-center break-all">akbarsupiad20@gmail.com</span>
     </a>
-    <a href="tel:081386176205" class="flex flex-col items-center gap-2 p-6 bg-white rounded-xl border border-primary/10 hover:border-primary/40 transition-all luxury-shadow group">
-      <span class="material-symbols-outlined text-primary text-2xl group-hover:scale-110 transition-transform">phone</span>
-      <span class="text-xs text-gray-500 font-medium">Telepon</span>
-      <span class="text-sm font-semibold">081386176205</span>
+    <a href="https://wa.me/message/3PBW3D7L3JY4N1" target="_blank" class="flex flex-col items-center gap-2 p-4 sm:p-3 md:p-6 bg-white rounded-xl border border-primary/10 hover:border-primary/40 transition-all luxury-shadow group">
+      <svg class="w-6 h-6 fill-primary group-hover:scale-110 transition-transform" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.458 5.704 1.459h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+      <span class="text-xs text-gray-500 font-medium">WhatsApp</span>
+      <span class="text-xs md:text-sm font-semibold">Hubungi via WA</span>
     </a>
-    <a href="https://www.linkedin.com/in/akbar-supia-dirja-7071192ba" target="_blank" class="flex flex-col items-center gap-2 p-6 bg-white rounded-xl border border-primary/10 hover:border-primary/40 transition-all luxury-shadow group">
+    <a href="https://www.linkedin.com/in/akbar-supia-dirja-7071192ba" target="_blank" class="flex flex-col items-center gap-2 p-4 sm:p-3 md:p-6 bg-white rounded-xl border border-primary/10 hover:border-primary/40 transition-all luxury-shadow group">
       <span class="material-symbols-outlined text-primary text-2xl group-hover:scale-110 transition-transform">person</span>
       <span class="text-xs text-gray-500 font-medium">LinkedIn</span>
-      <span class="text-sm font-semibold">Akbar Supia Dirja</span>
+      <span class="text-xs md:text-sm font-semibold">Akbar Supia Dirja</span>
     </a>
   </div>
   <form id="contact-form" class="space-y-6 reveal">
@@ -633,14 +712,18 @@ html{scroll-behavior:smooth}
     </div>
     <div class="text-sm text-gray-500">© 2026 Akbar Supia Dirja. All rights reserved.</div>
   </div>
-  <div class="mt-12 pt-8 border-t border-white/5 text-center text-xs tracking-widest uppercase text-gray-600">
-    Bisnis Digital • Business Intelligence • Content Creator
+  <div class="mt-12 pt-8 border-t border-white/5 text-center text-[10px] sm:text-xs tracking-wider sm:tracking-widest uppercase text-gray-600 flex flex-wrap justify-center gap-x-2 gap-y-1">
+    <span>Bisnis Digital</span>
+    <span class="opacity-50">•</span>
+    <span>Business Intelligence</span>
+    <span class="opacity-50">•</span>
+    <span>Content Creator</span>
   </div>
 </div>
 </footer>
 
 <!-- Back to Top -->
-<button id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed bottom-8 right-8 z-50 size-12 bg-primary text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
+<button id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed bottom-4 right-4 sm:bottom-8 sm:right-8 z-50 size-10 sm:size-12 bg-primary text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
   <span class="material-symbols-outlined">keyboard_arrow_up</span>
 </button>
 
@@ -699,17 +782,27 @@ setTimeout(typeRole, 1500);
 // Custom Cursor
 const cursorDot = document.querySelector('.cursor-dot');
 const cursorRing = document.querySelector('.cursor-ring');
-if(cursorDot && cursorRing && window.innerWidth > 768) {
+const isTouchDevice = window.matchMedia('(pointer: coarse)').matches;
+if(cursorDot && cursorRing && window.innerWidth > 768 && !isTouchDevice) {
+  let hasMoved = false;
   document.addEventListener('mousemove', e => {
+    if(!hasMoved) {
+      cursorDot.style.opacity = '1';
+      cursorRing.style.opacity = '1';
+      hasMoved = true;
+    }
     cursorDot.style.left = e.clientX - 4 + 'px';
     cursorDot.style.top = e.clientY - 4 + 'px';
     cursorRing.style.left = e.clientX - 17.5 + 'px';
     cursorRing.style.top = e.clientY - 17.5 + 'px';
   });
   document.querySelectorAll('a, button, .skill-tag, .group').forEach(el => {
-    el.addEventListener('mouseenter', () => { cursorRing.style.width = '50px'; cursorRing.style.height = '50px'; cursorRing.style.left = parseFloat(cursorRing.style.left) - 7.5 + 'px'; cursorRing.style.top = parseFloat(cursorRing.style.top) - 7.5 + 'px'; });
+    el.addEventListener('mouseenter', () => { cursorRing.style.width = '50px'; cursorRing.style.height = '50px'; });
     el.addEventListener('mouseleave', () => { cursorRing.style.width = '35px'; cursorRing.style.height = '35px'; });
   });
+} else {
+  if(cursorDot) cursorDot.style.display = 'none';
+  if(cursorRing) cursorRing.style.display = 'none';
 }
 
 // Scroll Progress Bar
